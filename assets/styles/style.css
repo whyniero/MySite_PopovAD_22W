@@ -1,0 +1,154 @@
+:root {
+    --clr-blue: #5707ff;
+    --clr-pink: #FF005C;
+}
+
+body{
+    font-family: 'Lato';
+}
+
+section{
+    margin-top: 200px;
+}
+
+.gradient-text {
+    color: var(--clr-pink);
+}
+
+h1, h2, h3, h5, p, a, li{
+    color: var(--clr-blue);
+}
+
+h2{
+    font-size: 3.5rem;
+}
+
+.line, .line-active{
+    width: 0;
+    height: 2px;
+    background-color: var(--clr-pink);
+    transition: .3s;
+}
+
+.social{
+    opacity: 0.5;
+    padding: 0 5px;
+    cursor: pointer;
+    transition: .2s;
+}
+
+.social:hover{
+    opacity: 1;
+    transition: .4s;
+}
+
+.line-active{
+    width: 100%;
+}
+
+.link-header, .link-footer{
+    font-size: 1.3rem;
+    font-weight: 500;
+    text-decoration: none;
+    outline: none;
+    padding: 0 12px;
+    transition: .3s;
+}
+
+.link-header:hover{
+    color:  var(--clr-pink);
+    transition: .4s;
+}
+
+.link-header:hover .line{
+    width: 100%;
+    transition: .4s;
+}
+
+.link-footer{
+    color: white;
+}
+
+.title-1{
+    font-size: 4rem;
+    padding-top: 10px;
+}
+
+.skills{
+    background-color: var(--clr-blue);
+}
+
+.skills h3{
+    font-size: 3.8rem;
+    text-align: center;
+    margin-bottom: 40px;
+    color: white;
+}
+
+.skill-2{
+    margin-left: 8%;
+}
+
+li{
+    font-weight: 500;
+    font-size: 2.4rem;
+    margin-bottom: 10px;
+    color: white;
+}
+
+.skill{
+    padding: 80px 0;
+}
+
+.career{
+    background-image: url(../imgs/bg-career.svg);
+    background-size: 80%;
+    background-repeat: no-repeat;
+    padding-bottom: 100px;
+}
+
+.h-border{
+    font-size: 1.8rem;
+    border: solid 3px var(--clr-blue);
+    border-radius: 20px;
+    padding: 5px;
+    margin-top: 40px;
+}
+
+.paths{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+}
+
+/* .path{
+    border: solid 3px var(--clr-blue);
+    border-radius: 20px;
+    padding: 10px;
+    margin-top: 40px;
+} */
+
+.h-border-1{
+    grid-row: 1;
+    grid-column: 4;
+}
+
+.h-border-2{
+    grid-row: 2;
+    grid-column: 3;
+}
+
+.h-border-3{
+    grid-row: 3;
+    grid-column: 2;
+}
+
+.h-border-4{
+    grid-row: 4;
+    grid-column: 1;
+}
+
+
+footer{
+    background-color: var(--clr-blue);
+}
