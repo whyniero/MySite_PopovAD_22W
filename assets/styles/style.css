@@ -1,26 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 :root {
     --clr-blue: #5707ff;
     --clr-pink: #FF005C;
+    --clr-soft-blue: #E0EEEF;
+}
+
+.btn-close{
+    font-size: 25px;
 }
 
 body{
-    font-family: 'Lato';
+    font-family: 'Montserrat';
 }
 
 section{
-    margin-top: 200px;
+    margin-top: 150px;
+}
+
+h1, h2, h3, h4, h5, h6, p, a, li{
+    color: var(--clr-blue);
+}
+
+p{
+    font-size: 1.3rem;
+}
+
+h2{
+    font-size: 3.5rem;
+}
+
+h4{
+    font-size: 2rem;
+}
+
+h6{
+    font-size: 1.6rem;
+}
+
+
+
+.pink-btn {
+    overflow: hidden;
+    position: relative;
+    transition: .2s;
+    z-index: 1;
+}
+
+.in-btn {
+    top: -30px;
+    right: -390px;
+    width: 380px;
+    height: 100px;
+    background-color: var(--clr-pink);
+    box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.5);
+    z-index: -1;
+    position: absolute;
+    transition: .5s;
+}
+
+.pink-btn:hover {
+    color: #ffffff;
+    transition: .8s;
+    box-shadow: 2px 2px 10px 5px rgba(0, 0, 0, 0.233);
+}
+
+.pink-btn:hover .in-btn {
+    right: -1px;
+    transition: .8s;
+}
+
+.nav-link{
+    color: var(--clr-blue);
 }
 
 .gradient-text {
     color: var(--clr-pink);
 }
 
-h1, h2, h3, h5, p, a, li{
-    color: var(--clr-blue);
-}
-
-h2{
-    font-size: 3.5rem;
+.pink-btn{
+    border: solid 3px var(--clr-pink);
+    border-radius: 18px;
+    color: var(--clr-pink);
+    font-size: 1.4rem;
+    padding: 10px 20px;
+    font-weight: 600;
+    background-color: white;
 }
 
 .line, .line-active{
@@ -74,26 +138,34 @@ h2{
     padding-top: 10px;
 }
 
-.skills{
-    background-color: var(--clr-blue);
+.sanyok-img{
+    width: 40%;
+}
+
+.about{
+    background-color: var(--clr-soft-blue);
+    padding: 50px 0;
+}
+
+.blocks{
+    margin-top: 80px;
+}
+
+.block{
+    width: 26%;
 }
 
 .skills h3{
     font-size: 3.8rem;
     text-align: center;
     margin-bottom: 40px;
-    color: white;
 }
 
-.skill-2{
-    margin-left: 8%;
-}
 
 li{
     font-weight: 500;
     font-size: 2.4rem;
     margin-bottom: 10px;
-    color: white;
 }
 
 .skill{
@@ -102,9 +174,17 @@ li{
 
 .career{
     background-image: url(../imgs/bg-career.svg);
-    background-size: 80%;
+    background-size: 46%;
     background-repeat: no-repeat;
-    padding-bottom: 100px;
+    background-color: var(--clr-soft-blue);
+    padding: 80px 0;
+}
+
+.num{
+    font-weight: 600;
+    color: var(--clr-blue);
+    margin-right: 4px;
+    align-self: start;
 }
 
 .h-border{
@@ -121,12 +201,6 @@ li{
     grid-template-rows: 1fr 1fr 1fr 1fr;
 }
 
-/* .path{
-    border: solid 3px var(--clr-blue);
-    border-radius: 20px;
-    padding: 10px;
-    margin-top: 40px;
-} */
 
 .h-border-1{
     grid-row: 1;
@@ -148,7 +222,175 @@ li{
     grid-column: 1;
 }
 
+.portfolio{
+    padding: 100px 0;
+    background-color: var(--clr-blue);
+}
+
+.form-control {
+    border: 3px solid var(--clr-blue);
+    border-radius: 16px;
+}
+
+.inpts{
+    width: 40%;
+}
+
+.inpt{
+    margin-bottom: 30px;
+}
+
+.portfolio {
+    margin-top: 0;
+}
 
 footer{
+    margin-top: 100px;
     background-color: var(--clr-blue);
+    padding: 50px 0;
+}
+
+footer .social{
+    opacity: 1;
+}
+
+.slider-1{
+    border-radius: 29px;
+}
+
+@media (max-width: 1200px){
+    .career {
+        background-size: 64%;
+    }
+}
+
+
+@media (max-width: 992px) {
+    html{
+        font-size: 13px;
+    }
+
+    section{
+        margin-top: 100px;
+    }
+    
+    .skill {
+        padding: 20px 0;
+    }
+
+    .inpts {
+        width: 50%;
+    }
+
+    .blocks {
+        margin-top: 30px;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .block {
+        margin-top: 20px;
+        width: 90%;
+    }
+
+    .pink-btn{
+        margin-top: 30px;
+    }
+
+    .sanyok-img {
+        width: 80%;
+        order: 1;
+        margin-bottom: 20px;
+    }
+
+    .block-left{
+        order: 2;
+    }
+
+}
+
+@media (max-width: 768px) {
+
+    html{
+        font-size: 12px;
+    }
+    .inpts {
+        width: 90%;
+    }
+
+    section{
+        margin-top: 80px;
+    }
+
+    .sanyok-img {
+        width: 90%;
+    }
+
+    .career {
+        background-size: 90%;
+    }
+
+    li {
+        font-size: 2.2rem;
+    }
+
+    .paths {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+    }
+}
+
+@media (max-width: 550px){
+    html{
+        font-size: 12px;
+    }
+
+    li {
+        font-size: 2rem;
+    }
+    .num{
+        align-self: center;
+    }
+    .h-border{
+        font-size: 1.8rem;
+        border: solid 3px var(--clr-blue);
+        border-radius: 20px;
+        padding: 12px 0;
+        margin-top: 40px;
+    }
+
+    .h-border-1{
+        grid-row: 4;
+        grid-column: 1;
+    }
+    
+    .h-border-2{
+        grid-row: 3;
+        grid-column: 1;
+    }
+    
+    .h-border-3{
+        grid-row: 2;
+        grid-column: 1;
+    }
+    
+    .h-border-4{
+        grid-row: 1;
+        grid-column: 1;
+    }
+
+    .career {
+        background-image: none;
+    }
+}
+
+@media (max-width: 380px){
+    html{
+        font-size: 11px;
+    }
+
+    li {
+        font-size: 1.8rem;
+    }
 }
